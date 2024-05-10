@@ -1,8 +1,11 @@
 package com.karpovich.dependencyinjectionexample.example2.data.network
 
-class ExampleApiService {
+import javax.inject.Inject
+
+class ExampleApiService @Inject constructor() {
 
     fun method() {
 
     }
+
 }
