@@ -4,20 +4,17 @@ import com.karpovich.dependencyinjectionexample.example2.data.datasource.Example
 import com.karpovich.dependencyinjectionexample.example2.data.datasource.ExampleLocalDataSourceImpl
 import com.karpovich.dependencyinjectionexample.example2.data.datasource.ExampleRemoteDataSource
 import com.karpovich.dependencyinjectionexample.example2.data.datasource.ExampleRemoteDataSourceImpl
+import dagger.Binds
 import dagger.Module
 import dagger.Provides
 
 @Module
-class DataModule {
+interface DataModule {
 
-    @Provides
-    fun provideLocalDataSource(implementation: ExampleLocalDataSourceImpl): ExampleLocalDataSource {
-        return implementation
-    }
+    @Binds
+    fun bindLocalDataSource(implementation: ExampleLocalDataSourceImpl): ExampleLocalDataSource
 
-    @Provides
-    fun provideRemoteDataSource(implementation: ExampleRemoteDataSourceImpl): ExampleRemoteDataSource {
-        return implementation
-    }
+    @Binds
+    fun bindRemoteDataSource(implementation: ExampleRemoteDataSourceImpl): ExampleRemoteDataSource
 
 }

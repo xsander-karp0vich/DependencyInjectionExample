@@ -20,9 +20,7 @@ class ComputerModule {
     }
 
     @Provides
-    fun provideKeyboard(): Keyboard {
-        return Keyboard()
-    }
+    fun provideKeyboard() = Keyboard()
 
     @Provides
     fun provideMouse(): Mouse {
