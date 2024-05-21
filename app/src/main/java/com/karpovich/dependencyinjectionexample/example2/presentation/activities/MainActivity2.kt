@@ -11,7 +11,7 @@ import com.karpovich.dependencyinjectionexample.example2.presentation.viewmodels
 import com.karpovich.dependencyinjectionexample.example2.presentation.viewmodels.ViewModelFactory
 import javax.inject.Inject
 
-class MainActivity : AppCompatActivity() {
+class MainActivity2 : AppCompatActivity() {
 
     private val component by lazy {
         (application as ExampleApplication).component

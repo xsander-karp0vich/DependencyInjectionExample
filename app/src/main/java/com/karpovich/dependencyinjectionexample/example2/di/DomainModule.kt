@@ -9,6 +9,7 @@ import dagger.Provides
 @Module
 interface DomainModule {
 
+    @ApplicationScope
     @Binds
     fun bindRepository(impl: ExampleRepositoryImpl): ExampleRepository
 
